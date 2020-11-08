@@ -50,6 +50,11 @@
             <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
           {{ end }}
         </p>
+        {{- if .Site.Params.showLicense -}}
+        <p class="credits theme-by text-muted">
+          {{ .Site.Params.License | safeHTML }}
+        </p>
+        {{- end }}
         <!-- Please don't remove this, keep my open source work credited :) -->
         <p class="credits theme-by text-muted">
           {{ i18n "poweredBy" . | safeHTML }}
